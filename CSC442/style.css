@@ -138,10 +138,61 @@ body {
      }
      
      #history {
-         margin-top: 20px;
+         margin-top: 30px;
+         padding: 20px;
+         background: rgba(255, 255, 255, 0.95);
+         border-radius: 12px;
+         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
      }
      
      #history h3 {
-         color: #fff;
-         margin-bottom: 10px;
+         color: #444;
+         font-size: 1.3em;
+         margin: 0 0 20px;
+         text-align: left;
+         border-bottom: 2px solid #2575fc;
+         padding-bottom: 10px;
+         position: relative;
+     }
+     
+     #history h3::before {
+         content: "📊";
+         margin-right: 8px;
+     }
+     
+     .history-item {
+         background: linear-gradient(to right, #f8f9fa, #e9ecef);
+         padding: 15px;
+         margin: 12px 0;
+         border-radius: 8px;
+         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+         transition: all 0.3s ease;
+         border-left: 4px solid #2575fc;
+     }
+     
+     .history-item:hover {
+         transform: translateX(5px);
+         background: linear-gradient(to right, #f1f3f5, #e9ecef);
+         border-left: 4px solid #6a11cb;
+     }
+     
+     .history-item p {
+         margin: 8px 0;
+         font-size: 0.95em;
+         color: #444;
+         display: flex;
+         align-items: center;
+         gap: 8px;
+     }
+     
+     .history-item p:first-child::before {
+         content: "👤";
+     }
+     
+     .history-item p:nth-child(2)::before {
+         content: "📏";
+     }
+     
+     .history-item p:last-child::before {
+         content: "🕒";
      }
